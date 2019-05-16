@@ -1,10 +1,3 @@
-# ******************************************************
-# Author       : CoffreLv
-# Last modified: 2018-12-18 16:00
-# Email        : coffrelv@163.com
-# Filename     : vimrc
-# Description  : 
-# ******************************************************
 "设置 mapleader
 let mapleader = ','
 
@@ -158,7 +151,7 @@ au FileType python set indentkeys-=0#
 filetype plugin indent on
 
 "flake8关闭时自动检查
-autocmd BufWritePost *.py call Flake8()
+autocmd BufWritePost *.py call flake8#Flake8()
 
 "====================================================================================================
 "Vundle插件管理
@@ -174,6 +167,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'majutsushi/tagbar'
 Bundle 'winmanager'
 Bundle 'jiangmiao/auto-pairs'
+Bundle 'nvie/vim-flake8.git'
 
 call vundle#end() " required
 filetype plugin indent on
